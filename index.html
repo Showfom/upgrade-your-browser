@@ -1,8 +1,30 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html>
     <head>
-        <script type="text/javascript">
-            /*@cc_on window.location.href = 'upgrade-your-browser.html?referrer=' + encodeURIComponent(window.location.href); @*/
-        </script>
+  <script type="text/javascript">
+//判断浏览器语言自动跳转开始
+  var type=navigator.appName
+if (type=="Netscape"){
+    varlang = navigator.language
+}
+else{
+    varlang = navigator.userLanguage
+}
+var lang =lang.substr(0,5)//取得浏览器语言的前两个字母
+switch(lang){
+	case("zh-cn"):
+		//alert("进行中文页面跳转");//进行中文跳转
+		window.location.href="upgrade-your-browser-zh-CN.html"
+		break;
+	case("zh-tw"):
+		//alert("进行中文页面跳转");//进行中文跳转
+		window.location.href="upgrade-your-browser-zh-TW.html"
+		break;
+	default:
+		//条件都不满足跳转到其他页面
+		window.location.href="upgrade-your-browser.html"
+}
+//判断浏览器语言自动跳转结束
+  </script>
     </head>
 </html>
