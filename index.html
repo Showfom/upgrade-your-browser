@@ -10,9 +10,9 @@
     //把用户的语言写入缓存，供下次获取使用
     localStorage.setItem('locale', language)
     //判断用户的语言，跳转到不同的地方
-    if (language.indexOf("zh-CN") !== -1) {
+    if (language.indexOf("zh-cn") !== -1) {
         window.location = 'upgrade-your-browser-zh-CN.html'
-    } else if (language.indexOf('zh-TW') !== -1) {
+    } else if (language.indexOf('zh-tw') !== -1) {
         window.location = 'upgrade-your-browser-zh-TW.html'
     } else {
         //其它的都使用英文
